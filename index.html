@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Official website of the Provincial Cooperatives and Development Office - Biliran">
+<meta name="theme-color" content="#38bdf8">
+<title>Provincial Cooperatives and Development Office - Biliran</title>
+
+<style>
+:root{
+    --sky:#38bdf8;
+    --sky-dark:#0284c7;
+    --sky-deep:#0369a1;
+    --yellow:#facc15;
+    --egg:#fff3b0;
+    --yellow-dark:#eab308;
+    --white:#ffffff;
+    --dark:#123047;
+    --muted:#587083;
+    --glass:rgba(255,255,255,.82);
+    --shadow:0 18px 45px rgba(3,105,161,.14);
+    --radius:22px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+    font-family:Inter,Segoe UI,Roboto,Arial,sans-serif;
+    color:var(--dark);
+    background:
+      radial-gradient(circle at 15% 15%, rgba(255,255,255,.95), transparent 30%),
+      linear-gradient(135deg,#38bdf8 0%,#bdefff 38%,#fff3b0 72%,#fde68a 100%);
+    line-height:1.6;
+}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.container{width:min(1180px,92%);margin:auto}
+
+/* TOP BAR */
+.topbar{
+    background:rgba(3,105,161,.94);
+    color:#fff;
+    font-size:.88rem;
+    padding:8px 0;
+}
+.topbar .container{
+    display:flex;
+    justify-content:space-between;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+
+/* PROFESSIONAL IMAGE HEADER */
+.site-header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(255,255,255,.96);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid rgba(2,132,199,.16);
+    box-shadow:0 7px 25px rgba(0,0,0,.08);
+}
+.header-banner{
+    width:100%;
+    background:#fff;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.header-banner-image{
+    width:100%;
+    height:auto;
+    max-height:260px;
+    object-fit:cover;
+    object-position:center;
+    display:block;
+}
+.site-header .navbar{
+    min-height:72px;
+}
+@media(max-width:700px){
+    .header-banner-image{
+        min-height:110px;
+        max-height:180px;
+        object-fit:cover;
+    }
+}
+
+/* HEADER */
+header{
+    background:transparent;
+    backdrop-filter:blur(16px);
+    border-bottom:1px solid rgba(2,132,199,.15);
+    box-shadow:0 6px 25px rgba(0,0,0,.06);
+}
+.navbar{
+    min-height:88px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:18px;
+}
+.brand{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    min-width:0;
+}
+.brand-seal{
+    width:58px;
+    height:58px;
+    object-fit:contain;
+    flex:none;
+}
+.brand-text{
+    line-height:1.1;
+}
+.brand-text strong{
+    display:block;
+    color:var(--sky-deep);
+    font-size:1.18rem;
+    letter-spacing:.5px;
+}
+.brand-text span{
+    display:block;
+    color:#486274;
+    font-size:.76rem;
+    margin-top:5px;
+}
+.header-bagong{
+    width:72px;
+    height:60px;
+    object-fit:contain;
+    margin-left:8px;
+    flex:none;
+}
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    list-style:none;
+}
+.nav-links a{
+    display:block;
+    padding:10px 12px;
+    border-radius:10px;
+    color:#27475b;
+    font-weight:600;
+    font-size:.9rem;
+}
+.nav-links a:hover{
+    background:#e0f5ff;
+    color:var(--sky-deep);
+}
+.menu-btn{
+    display:none;
+    border:0;
+    background:#e0f5ff;
+    color:var(--sky-deep);
+    font-size:1.5rem;
+    border-radius:10px;
+    padding:7px 12px;
+    cursor:pointer;
+}
+
+/* HERO */
+.hero{
+    min-height:650px;
+    display:flex;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+    padding:75px 0;
+}
+.hero:before,.hero:after{
+    content:"";
+    position:absolute;
+    border-radius:50%;
+    filter:blur(3px);
+    pointer-events:none;
+}
+.hero:before{
+    width:430px;height:430px;
+    background:rgba(255,255,255,.25);
+    top:-180px;right:-120px;
+}
+.hero:after{
+    width:350px;height:350px;
+    background:rgba(250,204,21,.22);
+    bottom:-170px;left:-100px;
+}
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.05fr .95fr;
+    gap:50px;
+    align-items:center;
+    position:relative;
+    z-index:1;
+}
+.eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:rgba(255,255,255,.7);
+    border:1px solid rgba(255,255,255,.8);
+    padding:8px 14px;
+    border-radius:999px;
+    color:var(--sky-deep);
+    font-weight:800;
+    font-size:.82rem;
+    margin-bottom:18px;
+}
+.hero h1{
+    font-size:clamp(2.3rem,5vw,4.4rem);
+    line-height:1.03;
+    letter-spacing:-2px;
+    margin-bottom:20px;
+    color:#073b5c;
+}
+.hero h1 span{color:var(--sky-dark)}
+.hero p{
+    max-width:670px;
+    color:#38586a;
+    font-size:1.08rem;
+    margin-bottom:28px;
+}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    padding:13px 20px;
+    border-radius:12px;
+    font-weight:800;
+    transition:.2s;
+    border:1px solid transparent;
+}
+.btn-primary{
+    background:linear-gradient(135deg,var(--sky-dark),#0369a1);
+    color:white;
+    box-shadow:0 10px 24px rgba(2,132,199,.25);
+}
+.btn-primary:hover{transform:translateY(-2px)}
+.btn-secondary{
+    background:rgba(255,255,255,.78);
+    color:#075985;
+    border-color:rgba(2,132,199,.22);
+}
+.btn-secondary:hover{background:#fff}
+
+/* HERO SEAL */
+.hero-seal-card{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.seal-wrap{
+    width:min(390px,82vw);
+    aspect-ratio:1;
+    padding:25px;
+    border-radius:50%;
+    background:rgba(255,255,255,.66);
+    box-shadow:0 28px 70px rgba(3,105,161,.20);
+    border:8px solid rgba(255,255,255,.72);
+    position:relative;
+}
+.seal-wrap:before{
+    content:"";
+    position:absolute;
+    inset:-17px;
+    border-radius:50%;
+    border:3px dashed rgba(234,179,8,.7);
+}
+.seal-wrap img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    border-radius:50%;
+    position:relative;
+    z-index:2;
+}
+
+/* STATS */
+.stats{
+    margin-top:-42px;
+    position:relative;
+    z-index:4;
+}
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+}
+.stat{
+    background:rgba(255,255,255,.9);
+    border:1px solid rgba(255,255,255,.9);
+    border-radius:18px;
+    padding:22px;
+    text-align:center;
+    box-shadow:var(--shadow);
+}
+.stat strong{
+    display:block;
+    color:var(--sky-deep);
+    font-size:1.8rem;
+}
+.stat span{color:var(--muted);font-size:.88rem}
+
+/* SECTIONS */
+section{padding:85px 0}
+.section-head{
+    text-align:center;
+    max-width:760px;
+    margin:0 auto 42px;
+}
+.section-head .tag{
+    color:#a16207;
+    font-weight:900;
+    font-size:.78rem;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+}
+.section-head h2{
+    color:#073b5c;
+    font-size:clamp(2rem,4vw,3rem);
+    margin:7px 0 10px;
+}
+.section-head p{color:var(--muted)}
+
+/* ABOUT */
+.about-grid{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:24px;
+}
+.card{
+    background:rgba(255,255,255,.84);
+    border:1px solid rgba(255,255,255,.9);
+    border-radius:var(--radius);
+    padding:30px;
+    box-shadow:var(--shadow);
+}
+.card h3{color:#075985;margin-bottom:12px}
+.card p{color:#526b7a}
+.vm-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px}
+.mini-card{
+    padding:22px;
+    background:linear-gradient(135deg,rgba(224,242,254,.9),rgba(254,249,195,.8));
+    border-radius:16px;
+}
+.mini-card h4{color:#075985;margin-bottom:6px}
+
+/* SERVICES */
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+.service{
+    background:rgba(255,255,255,.88);
+    padding:28px;
+    border-radius:20px;
+    box-shadow:var(--shadow);
+    border-top:4px solid var(--sky);
+    transition:.2s;
+}
+.service:hover{transform:translateY(-5px)}
+.icon{
+    width:48px;height:48px;
+    display:grid;place-items:center;
+    border-radius:14px;
+    background:linear-gradient(135deg,#bae6fd,#fef08a);
+    color:#075985;
+    font-size:1.35rem;
+    margin-bottom:15px;
+}
+.service h3{font-size:1.1rem;margin-bottom:8px;color:#164e63}
+.service p{color:var(--muted);font-size:.92rem}
+
+/* OFFICES */
+.office-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+}
+.office{
+    background:rgba(255,255,255,.88);
+    border-radius:18px;
+    padding:22px;
+    box-shadow:var(--shadow);
+}
+.office h3{color:#075985;font-size:1.05rem}
+.office p{color:var(--muted);font-size:.9rem;margin-top:7px}
+
+/* GALLERY */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:16px;
+}
+.gallery-item{
+    min-height:200px;
+    border-radius:18px;
+    overflow:hidden;
+    position:relative;
+    background:linear-gradient(135deg,#38bdf8,#facc15);
+    box-shadow:var(--shadow);
+}
+.gallery-item .placeholder{
+    position:absolute;
+    inset:0;
+    display:grid;
+    place-items:center;
+    color:white;
+    font-weight:800;
+    background:linear-gradient(135deg,rgba(2,132,199,.65),rgba(234,179,8,.5));
+    text-align:center;
+    padding:20px;
+}
+
+/* RESOURCES */
+.resources-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+.resource{
+    background:rgba(255,255,255,.9);
+    padding:25px;
+    border-radius:18px;
+    box-shadow:var(--shadow);
+}
+.resource h3{color:#075985;margin-bottom:8px}
+.resource p{color:var(--muted);font-size:.92rem;margin-bottom:14px}
+.resource a{color:#0284c7;font-weight:800}
+
+/* FAQ */
+.faq{max-width:900px;margin:auto}
+details{
+    background:rgba(255,255,255,.9);
+    border-radius:14px;
+    margin-bottom:12px;
+    box-shadow:0 7px 20px rgba(3,105,161,.08);
+    padding:0 20px;
+}
+summary{
+    cursor:pointer;
+    padding:18px 0;
+    font-weight:800;
+    color:#075985;
+}
+details p{padding:0 0 18px;color:var(--muted)}
+
+/* CONTACT */
+.contact-grid{
+    display:grid;
+    grid-template-columns:.85fr 1.15fr;
+    gap:24px;
+}
+.contact-list{list-style:none;margin-top:18px}
+.contact-list li{
+    padding:12px 0;
+    border-bottom:1px solid rgba(3,105,161,.1);
+    color:#506a79;
+}
+.form{
+    display:grid;
+    gap:13px;
+}
+.form input,.form textarea{
+    width:100%;
+    border:1px solid #cde4ee;
+    border-radius:12px;
+    padding:13px 14px;
+    font:inherit;
+    background:rgba(255,255,255,.9);
+    outline:none;
+}
+.form input:focus,.form textarea:focus{
+    border-color:#38bdf8;
+    box-shadow:0 0 0 3px rgba(56,189,248,.12);
+}
+.form textarea{min-height:140px;resize:vertical}
+
+/* FOOTER */
+footer{
+    background:#073b5c;
+    color:#dff6ff;
+    padding:40px 0 20px;
+}
+.footer-grid{
+    display:grid;
+    grid-template-columns:1.3fr 1fr 1fr;
+    gap:35px;
+}
+.footer-brand{
+    display:flex;
+    gap:14px;
+    align-items:center;
+}
+.footer-brand img{width:62px;height:62px;object-fit:contain}
+footer h3{color:white;margin-bottom:10px}
+footer p,footer li{color:#b9d6e5;font-size:.9rem}
+footer ul{list-style:none}
+footer li{margin:7px 0}
+.copyright{
+    border-top:1px solid rgba(255,255,255,.12);
+    margin-top:28px;
+    padding-top:18px;
+    text-align:center;
+    color:#9fc0d1;
+    font-size:.82rem;
+}
+
+/* BACK TO TOP */
+.top{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:45px;height:45px;
+    display:grid;
+    place-items:center;
+    background:#0284c7;
+    color:#fff;
+    border-radius:50%;
+    box-shadow:0 10px 25px rgba(2,132,199,.3);
+    z-index:99;
+}
+
+/* RESPONSIVE */
+@media(max-width:1000px){
+    .nav-links{display:none}
+    .menu-btn{display:block}
+    .nav-links.open{
+        display:flex;
+        position:absolute;
+        left:4%;
+        right:4%;
+        top:calc(100% + 4px);
+        flex-direction:column;
+        align-items:stretch;
+        background:white;
+        padding:12px;
+        border-radius:16px;
+        box-shadow:0 15px 40px rgba(0,0,0,.12);
+    }
+    .nav-links a{padding:13px}
+    .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+    .hero{text-align:center}
+    .hero p{margin-left:auto;margin-right:auto}
+    .actions{justify-content:center}
+    .stats-grid{grid-template-columns:repeat(2,1fr)}
+    .office-grid{grid-template-columns:repeat(2,1fr)}
+    .services-grid,.resources-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:650px){
+    .brand-text span{font-size:.68rem}
+    .brand-seal{width:48px;height:48px}
+    .header-bagong{width:58px;height:48px}
+    .topbar .container{font-size:.75rem}
+    .hero{padding:55px 0}
+    .stats-grid,.services-grid,.office-grid,.gallery,.resources-grid,.vm-grid{grid-template-columns:1fr}
+    section{padding:65px 0}
+    .footer-grid{grid-template-columns:1fr}
+    .seal-wrap{width:290px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+    <div class="container">
+        <span>🇵🇭 Republic of the Philippines</span>
+        <span>Province of Biliran • Provincial Capitol, Naval, Biliran</span>
+    </div>
+</div>
+
+<header class="site-header">
+    <!--
+      HEADER BANNER:
+      Save the image supplied by the user as:
+          pcdo-header.png
+      Then place it in the same folder as index.html.
+    -->
+    <div class="header-banner">
+        <img src="pcdo-header.png"
+             alt="Biliran Provincial Cooperatives and Development Office Header"
+             class="header-banner-image">
+    </div>
+
+    <nav class="navbar container">
+        <a href="#home" class="brand">
+            <img src="bilseal.png"
+                 alt="Province of Biliran Official Seal"
+                 class="brand-seal">
+            <div class="brand-text">
+                <strong>BILIRAN PCDO</strong>
+                <span>Provincial Cooperatives and Development Office</span>
+            </div>
+        </a>
+
+        <button class="menu-btn" id="menuBtn" aria-label="Open navigation">☰</button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#offices">MCDO Offices</a></li>
+            <li><a href="#services">Programs & Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#resources">Resources</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#faqs">FAQs</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+    <div class="container hero-grid">
+        <div>
+            <div class="eyebrow">● Official Provincial Government Office</div>
+            <h1>Empowering <span>Cooperatives</span>, Strengthening Communities</h1>
+            <p>
+                Welcome to the Provincial Cooperatives and Development Office of Biliran.
+                We support cooperative organizations through capability building, technical
+                assistance, coordination, development programs, and responsive services.
+            </p>
+            <div class="actions">
+                <a class="btn btn-primary" href="#services">Explore Programs</a>
+                <a class="btn btn-secondary" href="#about">Learn More</a>
+            </div>
+        </div>
+
+        <!-- BILSEAL CENTER -->
+        <div class="hero-seal-card">
+            <div class="seal-wrap">
+                <img src="bilseal.png" alt="Province of Biliran Official Seal">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="stats" aria-label="Office statistics">
+    <div class="container stats-grid">
+        <div class="stat"><strong>8</strong><span>Municipalities</span></div>
+        <div class="stat"><strong>100+</strong><span>Cooperatives Served</span></div>
+        <div class="stat"><strong>50+</strong><span>Programs & Activities</span></div>
+        <div class="stat"><strong>1,000+</strong><span>Members Reached</span></div>
+    </div>
+</section>
+
+<section id="about">
+    <div class="container">
+        <div class="section-head">
+            <div class="tag">About the Office</div>
+            <h2>Provincial Cooperatives and Development Office</h2>
+            <p>Serving cooperative organizations and communities throughout the Province of Biliran.</p>
+        </div>
+
+        <div class="about-grid">
+            <div class="card">
+                <h3>Who We Are</h3>
+                <p>
+                    The Provincial Cooperatives and Development Office (PCDO) is a provincial
+                    government office dedicated to strengthening the cooperative sector in
+                    Biliran. The office works with cooperatives, municipalities, national
+                    government agencies, partner institutions, and community stakeholders
+                    to promote sustainable and inclusive cooperative development.
+                </p>
+
+                <div class="vm-grid">
+                    <div class="mini-card">
+                        <h4>Our Vision</h4>
+                        <p>A progressive and empowered cooperative sector contributing to inclusive and sustainable development in Biliran.</p>
+                    </div>
+                    <div class="mini-card">
+                        <h4>Our Mission</h4>
+                        <p>To provide responsive technical assistance, capacity building, coordination, monitoring, and development support to cooperatives.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Our Core Values</h3>
+                <p>
+                    We promote professionalism, transparency, accountability, service,
+                    participation, cooperation, innovation, and community empowerment.
+                </p>
+                <div class="vm-grid">
+                    <div class="mini-card"><h4>Integrity</h4><p>Responsible and ethical public service.</p></div>
+                    <div class="mini-card"><h4>Service</h4><p>People-centered and responsive assistance.</p></div>
+                    <div class="mini-card"><h4>Cooperation</h4><p>Working together toward shared goals.</p></div>
+                    <div class="mini-card"><h4>Innovation</h4><p>Practical solutions for evolving cooperative needs.</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="services">
+    <div class="container">
+        <div class="section-head">
+            <div class="tag">What We Do</div>
+            <h2>Programs & Services</h2>
+            <p>Support services designed to help cooperatives become more capable, sustainable, and community-responsive.</p>
+        </div>
+
+        <div class="services-grid">
+            <article class="service">
+                <div class="icon">🤝</div>
+                <h3>Cooperative Development</h3>
+                <p>Assistance for cooperative formation, strengthening, organizational development, and sustainability.</p>
+            </article>
+            <article class="service">
+                <div class="icon">🎓</div>
+                <h3>Capacity Building</h3>
+                <p>Training, seminars, learning sessions, and capability-building activities for officers, members, and practitioners.</p>
+            </article>
+            <article class="service">
+                <div class="icon">📋</div>
+                <h3>Technical Assistance</h3>
+                <p>Guidance and technical support on cooperative operations, governance, documentation, and development concerns.</p>
+            </article>
+            <article class="service">
+                <div class="icon">📊</div>
+                <h3>Monitoring & Assessment</h3>
+                <p>Coordination and monitoring of cooperative activities, accomplishments, development needs, and interventions.</p>
+            </article>
+            <article class="service">
+                <div class="icon">🌱</div>
+                <h3>Livelihood & Enterprise</h3>
+                <p>Support for productive economic activities, enterprise development, partnerships, and community-based initiatives.</p>
+            </article>
+            <article class="service">
+                <div class="icon">🏛️</div>
+                <h3>Government Coordination</h3>
+                <p>Linking cooperatives with local government units, agencies, institutions, and other development partners.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section id="offices">
+    <div class="container">
+        <div class="section-head">
+            <div class="tag">Municipal Coordination</div>
+            <h2>MCDO Offices</h2>
+            <p>Municipal Cooperative Development coordination and support across Biliran's municipalities.</p>
+        </div>
+
+        <div class="office-grid">
+            <div class="office"><h3>Naval</h3><p>Municipal cooperative development coordination and assistance.</p></div>
+            <div class="office"><h3>Almeria</h3><p>Cooperative development coordination and community support.</p></div>
+            <div class="office"><h3>Biliran</h3><p>Municipal cooperative development services and coordination.</p></div>
+            <div class="office"><h3>Cabucgayan</h3><p>Support for cooperative organizations and local initiatives.</p></div>
+            <div class="office"><h3>Culaba</h3><p>Technical and development assistance for cooperatives.</p></div>
+            <div class="office"><h3>Kawayan</h3><p>Cooperative sector coordination and capacity development.</p></div>
+            <div class="office"><h3>Caibiran</h3><p>Municipal cooperative development support and coordination.</p></div>
+            <div class="office"><h3>Maripipi</h3><p>Cooperative development and community partnership support.</p></div>
+        </div>
+    </div>
+</section>
+
+<section id="gallery">
+    <div class="container">
+        <div class="section-head">
+            <div class="tag">Activities & Events</div>
+            <h2>Gallery</h2>
+            <p>Replace the placeholders below with official PCDO activity photographs and videos.</p>
+        </div>
+
+        <div class="gallery">
+            <div class="gallery-item"><div class="placeholder">Cooperative Training & Capability Building</div></div>
+            <div class="gallery-item"><div class="placeholder">Cooperative Meetings & Consultations</div></div>
+            <div class="gallery-item"><div class="placeholder">Provincial Cooperative Activities</div></div>
+            <div class="gallery-item"><div class="placeholder">Community Development Activities</div></div>
+            <div class="gallery-item"><div class="placeholder">Cooperative Events & Celebrations</div></div>
+            <div class="gallery-item"><div class="placeholder">Partnership & Coordination Activities</div></div>
+        </div>
+    </div>
+</section>
+
+<section id="resources">
+    <div class="container">
+        <div class="section-head">
+            <div class="tag">Information Center</div>
+            <h2>Resources</h2>
+            <p>Important documents and information for cooperatives and stakeholders.</p>
+        </div>
+
+        <div class="resources-grid">
+            <div class="resource">
+                <h3>Forms & Downloads</h3>
+                <p>Access cooperative forms, templates, guides, and other downloadable materials.</p>
+                <a href="#" onclick="alert('Add your official downloadable files here.');return false;">View Downloads →</a>
+            </div>
+            <div class="resource">
+                <h3>Cooperative Directory</h3>
+                <p>Directory and profile information for registered or monitored cooperatives.</p>
+                <a href="#" onclick="alert('Connect this button to your Cooperative Directory page.');return false;">Open Directory →</a>
+            </div>
+            <div class="resource">
+                <h3>Announcements</h3>
+                <p>Latest office notices, schedules, programs, training activities, and cooperative updates.</p>
+                <a href="#" onclick="alert('Add your official announcements here.');return false;">View Announcements →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="faqs">
+    <div class="container">
+        <div class="section-head">
+            <div class="tag">Frequently Asked Questions</div>
+            <h2>FAQs</h2>
+            <p>Common questions about cooperative development assistance.</p>
+        </div>
+
+        <div class="faq">
+            <details>
+                <summary>What services does the PCDO provide?</summary>
+                <p>The office provides cooperative development assistance, technical assistance, capability building, coordination, monitoring, and other development support.</p>
+            </details>
+            <details>
+                <summary>Who can request assistance?</summary>
+                <p>Cooperatives, cooperative officers and members, prospective cooperative organizers, partner institutions, and other stakeholders may coordinate with the office regarding appropriate services.</p>
+            </details>
+            <details>
+                <summary>Where is the PCDO located?</summary>
+                <p>The Provincial Cooperatives and Development Office is located at the Provincial Capitol, Naval, Biliran.</p>
+            </details>
+            <details>
+                <summary>How can we contact the office?</summary>
+                <p>Use the contact details below or visit the office during official government working hours.</p>
+            </details>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <div class="section-head">
+            <div class="tag">Get in Touch</div>
+            <h2>Contact Us</h2>
+            <p>For cooperative development concerns, coordination, and requests for assistance.</p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="card">
+                <h3>Provincial Cooperatives and Development Office</h3>
+                <ul class="contact-list">
+                    <li><strong>📍 Office:</strong> Provincial Capitol, Naval, Biliran</li>
+                    <li><strong>✉️ Email:</strong> pcdo@biliran.gov.ph</li>
+                    <li><strong>☎️ Phone:</strong> Provincial Capitol Office</li>
+                    <li><strong>🕘 Office Hours:</strong> Monday–Friday, 8:00 AM–5:00 PM</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Send a Message</h3>
+                <form class="form" onsubmit="sendMessage(event)">
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                    <input type="text" placeholder="Subject" required>
+                    <textarea placeholder="Write your message..." required></textarea>
+                    <button class="btn btn-primary" type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <div class="container footer-grid">
+        <div>
+            <div class="footer-brand">
+                <img src="bilseal.png" alt="Biliran Seal">
+                <div>
+                    <h3>Biliran PCDO</h3>
+                    <p>Provincial Cooperatives and Development Office</p>
+                </div>
+            </div>
+            <p style="margin-top:16px">
+                Empowering cooperatives and strengthening communities throughout the Province of Biliran.
+            </p>
+        </div>
+
+        <div>
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Programs & Services</a></li>
+                <li><a href="#offices">MCDO Offices</a></li>
+                <li><a href="#resources">Resources</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h3>Government & Partners</h3>
+            <ul>
+                <li>Province of Biliran</li>
+                <li>Cooperative Development Authority</li>
+                <li>Municipal Cooperative Development Offices</li>
+                <li>Cooperative Organizations</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container copyright">
+        © <span id="year"></span> Provincial Cooperatives and Development Office – Biliran. All Rights Reserved.
+    </div>
+</footer>
+
+<a href="#home" class="top" aria-label="Back to top">↑</a>
+
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("open");
+});
+
+document.querySelectorAll("#navLinks a").forEach(link => {
+    link.addEventListener("click", () => navLinks.classList.remove("open"));
+});
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+function sendMessage(event){
+    event.preventDefault();
+    alert("Thank you for contacting the Provincial Cooperatives and Development Office - Biliran. Please connect this form to your official email or backend service to receive messages.");
+    event.target.reset();
+}
+</script>
+
+</body>
+</html>
